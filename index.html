@@ -3,9 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link rel="stylesheet" href="assets/style.css" />
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>Sweater Weather</title>
 </head>
 <body>
-    
+<!-- Header -->
+<nav>
+    <div class="nav-wrapper blue-grey darken-1">
+      <a href="#" class="brand-logo center">Welcome to Sweater Weather</a>
+     
+    </div>
+      
+  </nav>
+  
+    <div class="row">
+        <!-- Saved Searches and search box -->
+        <div class="col s6 m3">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">Search Box</span>
+                <!-- Search box -->
+                <div class="input-field">
+                    <input placeholder="Enter City" id="first_name" type="text" class="validate">
+                    
+                  </div>
+                <p class="center">Previous Searches will pop up here!</p>
+              </div>
+              <!-- Previous Searches -->
+              <div class="collection blue-grey darken-1">
+                <a href="#!" class="collection-item">Orlando</a>
+                <a href="#!" class="collection-item ">New York</a>
+                <a href="#!" class="collection-item">Los Angeles</a>
+                <a href="#!" class="collection-item">Boston</a>
+              </div>
+            </div>
+          </div>
+            <!-- Current Weather -->
+            <div class="col s12 m9">
+                <div class="card blue-grey darken-1">
+                  <div class="card-content white-text">
+                    <span class="card-title center" id="city">City</span>
+                    <p class="center" id= "date">Date</p>
+                    <p id= "temp">Temperture:</p>
+                    <p id= "humidity">Humidity:</p>
+                     <p id= "windSpeed">Wind Speed:</p>
+                    <p id= "uv">UV Index:</p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+    <div class="row">
+
+    </div>
+
+<script src="assets/script.js"></script>
 </body>
 </html>
