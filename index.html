@@ -15,7 +15,7 @@
 <!-- Header -->
 <nav>
     <div class="nav-wrapper blue-grey darken-1">
-      <a href="#" class="brand-logo center">Welcome to Sweater Weather</a>
+      <a href="#" class="brand-logo center">Sweater Weather</a>
      
     </div>
       
@@ -23,23 +23,23 @@
   
     <div class="row">
         <!-- Saved Searches and search box -->
-        <div class="col s6 m3">
+        <div class="col s12 m3">
             <div class="card blue-grey darken-1">
               <div class="card-content white-text">
                 <span class="card-title">Search Box</span>
                 <!-- Search box -->
                 <div class="input-field">
-                    <input placeholder="Enter City" id="first_name" type="text" class="validate">
+                    <input placeholder="Enter City" id="cityInput" type="text" class="validate">
                     
                   </div>
                 <p class="center">Previous Searches will pop up here!</p>
               </div>
               <!-- Previous Searches -->
               <div class="collection blue-grey darken-1">
-                <a href="#!" class="collection-item">Orlando</a>
-                <a href="#!" class="collection-item ">New York</a>
-                <a href="#!" class="collection-item">Los Angeles</a>
-                <a href="#!" class="collection-item">Boston</a>
+                <a href="#!" class="collection-item" id="city1">Orlando</a>
+                <a href="#!" class="collection-item" id="city2">New York</a>
+                <a href="#!" class="collection-item" id="city3">Los Angeles</a>
+                <a href="#!" class="collection-item" id="city4">Boston</a>
               </div>
             </div>
           </div>
@@ -56,13 +56,22 @@
                   </div>
                 </div>
               </div>
+              <!-- 5 day forecast here -->
+              <div class="col s12 m9">
+                <div class="card blue-grey darken-1">
+                  <div class="card-content white-text">
+                    <span class="card-title center">5-Day Forecast</span>
+                    
+                  </div>
+                </div>
+              </div>
 
 
             </div>
     <div class="row">
 
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="assets/script.js"></script>
 </body>
 </html>
