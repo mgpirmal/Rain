@@ -43,12 +43,51 @@ console.log(iconurl);
         console.log(response.wind.speed);
         });
 
+// Below is code for forecast 
+// ==================================================================================
+var query2URL = "http://api.openweathermap.org/data/2.5/forecast?q="+search+"&units=imperial&appid=d4498fe291ca2967ed4812e5f7191859";
+$.ajax({
+  url: query2URL,
+  method: "GET"
+})
+  // After the data comes back from the API
+  .then(function(response) {
+      console.log(response);
+      var iconcode1 = response.list[0].weather[0].icon;
+var iconurl1 = "http://openweathermap.org/img/w/" + iconcode1 + ".png";
+console.log(iconurl1);
+      document.getElementById("temp1").innerHTML = "Temp: "+response.list[0].main.temp+ "F";
+      $('#wicon1').attr('src', iconurl1);
+
+      var iconcode2 = response.list[1].weather[0].icon;
+      var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
+      console.log(iconurl2);
+            document.getElementById("temp2").innerHTML = "Temp: "+response.list[1].main.temp+ "F";
+            $('#wicon2').attr('src', iconurl2);
+
+            var iconcode3 = response.list[2].weather[0].icon;
+            var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
+            console.log(iconurl3);
+                  document.getElementById("temp3").innerHTML = "Temp: "+response.list[2].main.temp+ "F";
+                  $('#wicon3').attr('src', iconurl3);
+
+                  var iconcode4 = response.list[3].weather[0].icon;
+                  var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
+                  console.log(iconurl4);
+                        document.getElementById("temp4").innerHTML = "Temp: "+response.list[3].main.temp+ "F";
+                        $('#wicon4').attr('src', iconurl4);
+      
+      });
+
+
+
 };
 
 
 
 function start(response){
-
+  var search = "orlando"
+  var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="+search+"&units=imperial&appid=d4498fe291ca2967ed4812e5f7191859";
 
     $.ajax({
         url: queryURL,
@@ -68,8 +107,50 @@ console.log(iconurl);
             console.log(response.main.temp);
             console.log(response.wind.speed);
             });
+            // Below is code for forecast 
+// ==================================================================================
+var query2URL = "http://api.openweathermap.org/data/2.5/forecast?q="+search+"&units=imperial&appid=d4498fe291ca2967ed4812e5f7191859";
+$.ajax({
+  url: query2URL,
+  method: "GET"
+})
+  // After the data comes back from the API
+  .then(function(response) {
+      console.log(response);
+      var iconcode1 = response.list[0].weather[0].icon;
+var iconurl1 = "http://openweathermap.org/img/w/" + iconcode1 + ".png";
+console.log(iconurl1);
+      document.getElementById("temp1").innerHTML = "Temp: "+response.list[0].main.temp+ "F";
+      $('#wicon1').attr('src', iconurl1);
+
+      var iconcode2 = response.list[1].weather[0].icon;
+      var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
+      console.log(iconurl2);
+            document.getElementById("temp2").innerHTML = "Temp: "+response.list[1].main.temp+ "F";
+            $('#wicon2').attr('src', iconurl2);
+
+            var iconcode3 = response.list[2].weather[0].icon;
+            var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
+            console.log(iconurl3);
+                  document.getElementById("temp3").innerHTML = "Temp: "+response.list[2].main.temp+ "F";
+                  $('#wicon3').attr('src', iconurl3);
+
+                  var iconcode4 = response.list[3].weather[0].icon;
+                  var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
+                  console.log(iconurl4);
+                        document.getElementById("temp4").innerHTML = "Temp: "+response.list[3].main.temp+ "F";
+                        $('#wicon4').attr('src', iconurl4);
+      
+      });
+
 
 };
+
+
+
+
+
+
 function renderCity(){
       
      // Use JSON.parse() to convert text to JavaScript object
