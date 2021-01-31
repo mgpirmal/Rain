@@ -1,5 +1,6 @@
 // var search= document.querySelector("#cityInput");
-var search = "Sydney";
+var search = document.getElementById("input").value;
+// var search = "Orlando";
 var city1= document.querySelector("#city1");
 var city2= document.querySelector("#city2");
 var city3= document.querySelector("#city3");
@@ -20,7 +21,9 @@ var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="+search+"&unit
 
 
 function call(){
-
+  var search = document.getElementById("input").value;
+  var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="+search+"&units=imperial&appid=d4498fe291ca2967ed4812e5f7191859";
+console.log(search);
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -88,10 +91,14 @@ function saveCity() {
   // Use .setItem() to store object in storage and JSON.stringify to convert it as a string
   localStorage.setItem("citys", JSON.stringify(citys));
 };
-
+;
 $(document).ready(function() {
-  $("#cityInput").click(function(){
-      call();
+  
+  $("#submit").click(function(){
+    
+    
+    console.log(search)
+      call(search);
   }); 
 });
 
