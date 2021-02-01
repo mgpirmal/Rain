@@ -79,6 +79,12 @@ console.log(iconurl1);
                   console.log(iconurl4);
                         document.getElementById("temp4").innerHTML = "Temp: "+response.list[24].main.temp_max+ "F / "+response.list[24].main.temp_min+ "F";
                         $('#wicon4').attr('src', iconurl4);
+
+                        var iconcode5 = response.list[32].weather[0].icon;
+                        var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
+                        console.log(iconurl5);
+                              document.getElementById("temp5").innerHTML = "Temp: "+response.list[32].main.temp_max+ "F / "+response.list[32].main.temp_min+ "F";
+                              $('#wicon5').attr('src', iconurl5);
       
       });
 
