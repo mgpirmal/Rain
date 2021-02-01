@@ -59,30 +59,35 @@ $.ajax({
       var iconcode1 = response.list[0].weather[0].icon;
 var iconurl1 = "http://openweathermap.org/img/w/" + iconcode1 + ".png";
 console.log(iconurl1);
+document.getElementById("date1").innerHTML = response.list[0].dt_txt;
       document.getElementById("temp1").innerHTML = "Temp: "+response.list[0].main.temp_max+ "F / "+response.list[0].main.temp_min+ "F";
       $('#wicon1').attr('src', iconurl1);
 // Temp every 24 hours (each list is 3 hours)
       var iconcode2 = response.list[8].weather[0].icon;
       var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
       console.log(iconurl2);
+      document.getElementById("date2").innerHTML = response.list[8].dt_txt;
             document.getElementById("temp2").innerHTML = "Temp: "+response.list[8].main.temp_max+ "F / "+response.list[8].main.temp_min+ "F";
             $('#wicon2').attr('src', iconurl2);
 
             var iconcode3 = response.list[16].weather[0].icon;
             var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
             console.log(iconurl3);
+            document.getElementById("date3").innerHTML = response.list[16].dt_txt;
                   document.getElementById("temp3").innerHTML = "Temp: "+response.list[16].main.temp_max+ "F / "+response.list[16].main.temp_min+ "F";
                   $('#wicon3').attr('src', iconurl3);
 
                   var iconcode4 = response.list[24].weather[0].icon;
                   var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
                   console.log(iconurl4);
+                  document.getElementById("date4").innerHTML = response.list[24].dt_txt;
                         document.getElementById("temp4").innerHTML = "Temp: "+response.list[24].main.temp_max+ "F / "+response.list[24].main.temp_min+ "F";
                         $('#wicon4').attr('src', iconurl4);
 
                         var iconcode5 = response.list[32].weather[0].icon;
                         var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
                         console.log(iconurl5);
+                        document.getElementById("date5").innerHTML = response.list[32].dt_txt;
                               document.getElementById("temp5").innerHTML = "Temp: "+response.list[32].main.temp_max+ "F / "+response.list[32].main.temp_min+ "F";
                               $('#wicon5').attr('src', iconurl5);
       
@@ -129,30 +134,35 @@ $.ajax({
       var iconcode1 = response.list[0].weather[0].icon;
 var iconurl1 = "http://openweathermap.org/img/w/" + iconcode1 + ".png";
 console.log(iconurl1);
+      document.getElementById("date1").innerHTML = response.list[0].dt_txt;
       document.getElementById("temp1").innerHTML = "Temp: "+response.list[0].main.temp_max+ "F / "+response.list[0].main.temp_min+ "F";
       $('#wicon1').attr('src', iconurl1);
 // Temp every 24 hours (each list is 3 hours)
       var iconcode2 = response.list[8].weather[0].icon;
       var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
       console.log(iconurl2);
+      document.getElementById("date2").innerHTML = response.list[8].dt_txt;
             document.getElementById("temp2").innerHTML = "Temp: "+response.list[8].main.temp_max+ "F / "+response.list[8].main.temp_min+ "F";
             $('#wicon2').attr('src', iconurl2);
 
             var iconcode3 = response.list[16].weather[0].icon;
             var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
             console.log(iconurl3);
+            document.getElementById("date3").innerHTML = response.list[16].dt_txt;
                   document.getElementById("temp3").innerHTML = "Temp: "+response.list[16].main.temp_max+ "F / "+response.list[16].main.temp_min+ "F";
                   $('#wicon3').attr('src', iconurl3);
 
                   var iconcode4 = response.list[24].weather[0].icon;
                   var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
                   console.log(iconurl4);
+                  document.getElementById("date4").innerHTML = response.list[24].dt_txt;
                         document.getElementById("temp4").innerHTML = "Temp: "+response.list[24].main.temp_max+ "F / "+response.list[24].main.temp_min+ "F";
                         $('#wicon4').attr('src', iconurl4);
 
                         var iconcode5 = response.list[32].weather[0].icon;
                   var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
                   console.log(iconurl5);
+                  document.getElementById("date5").innerHTML = response.list[32].dt_txt;
                         document.getElementById("temp5").innerHTML = "Temp: "+response.list[32].main.temp_max+ "F / "+response.list[32].main.temp_min+ "F";
                         $('#wicon5').attr('src', iconurl5);
       
