@@ -31,9 +31,12 @@ console.log(search);
     // After the data comes back from the API
     .then(function(response) {
         console.log(response);
+
+        // pull icon code from api and add it to url to show on page
         var iconcode = response.weather[0].icon;
 var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
 console.log(iconurl);
+        // replace elements eith api response 
         document.getElementById("temp").innerHTML = "Temp: "+response.main.temp+ "F";
         document.getElementById("windSpeed").innerHTML = "Wind Speed: "+response.wind.speed+ "MPH";
         document.getElementById("humidity").innerHTML = "Humidity: "+response.main.humidity+ "%";
@@ -140,6 +143,12 @@ console.log(iconurl1);
                   console.log(iconurl4);
                         document.getElementById("temp4").innerHTML = "Temp: "+response.list[24].main.temp_max+ "F / "+response.list[24].main.temp_min+ "F";
                         $('#wicon4').attr('src', iconurl4);
+
+                        var iconcode5 = response.list[32].weather[0].icon;
+                  var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
+                  console.log(iconurl5);
+                        document.getElementById("temp5").innerHTML = "Temp: "+response.list[32].main.temp_max+ "F / "+response.list[32].main.temp_min+ "F";
+                        $('#wicon5').attr('src', iconurl5);
       
       });
 
